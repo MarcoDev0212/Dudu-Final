@@ -472,19 +472,7 @@ function createNovidadeCard(novidade, index) {
             <p class="novidade-description">${novidade.description}</p>
             <div class="novidade-badge">${novidade.badge}</div>
             <div class="countdown-timer" id="countdown-${index}">
-                <div class="countdown-item">
-                    <span class="countdown-value" id="days-${index}">${days}</span>
-                    <span class="countdown-label">Dias</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="hours-${index}">${hours}</span>
-                    <span class="countdown-label">Horas</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="minutes-${index}">${minutes}</span>
-                    <span class="countdown-label">Min</span>
-                </div>
-            </div>
+               
             <div class="novidade-cta">
                 <button class="notify-btn" onclick="notifyMe('${novidade.name}')">
                     <i class="fas fa-bell"></i> Avise-me
