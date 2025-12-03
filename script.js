@@ -5,7 +5,8 @@ const products = [
         name: "Camiseta Boss Black",
         price: 89.90,
         images: [
-            "BossPreta.png"                                     
+            "BossPreta.png",
+            "BossPreta.png"
         ],
         description: "Uma peça desenvolvida para quem não abre mão de qualidade e estilo, a Camiseta Estampada Boss Life é um item indispensável no seu guarda-roupa.",
         featured: true,
