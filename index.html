@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC-Store | Camisas Masculinas Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-crown"></i>DC<span>Store</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#novidades">Novidades</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <!-- Home com imagem de fundo -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>O VISUAL QUE CONQUISTA RESPEITO</h1>
+            <p>Cortes precisos, tecidos superiores e design pensado para elevar sua postura e sua autoconfiança.</p>
+            <div class="hero-buttons">
+                <a href="#produtos" class="btn">Explorar Coleção</a>
+                <a href="#novidades" class="btn btn-outline">Ver Novidades</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Novidades -->
+    <section id="novidades">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lançamentos Exclusivos</h2>
+                <p class="section-subtitle">Fique por dentro das próximas tendências! Nossas novas coleções estão chegando com designs únicos e materiais premium.</p>
+            </div>
+            <div class="novidades-grid" id="novidadesGrid">
+                <!-- Produtos em destaque serão inseridos via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa Coleção</h2>
+                <p class="section-subtitle">Explore nossa linha completa de camisas masculinas, onde qualidade, conforto e estilo se encontram em cada detalhe.</p>
+            </div>
+            
+            <!-- Menu de Filtros -->
+            <div class="products-filter" id="productsFilter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="boss">Boss</button>
+                <button class="filter-btn" data-filter="armani">Armani</button>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Produtos serão inseridos via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal do Produto -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="product-detail">
+                <div class="product-detail-image">
+                    <div class="modal-gallery">
+                        <div class="modal-gallery-main">
+                            <img id="modalImage" src="" alt="Produto">
+                        </div>
+                        <div class="modal-gallery-thumbs" id="modalGalleryThumbs">
+                            <!-- Miniaturas serão inseridas via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="product-detail-info">
+                    <h2 class="product-detail-title" id="modalTitle"></h2>
+                    <div class="product-detail-price" id="modalPrice"></div>
+                    <p class="product-detail-description" id="modalDescription"></p>
+                    
+                    <div class="product-features">
+                        <ul>
+                            <li>100% Algodão Egípcio</li>
+                            <li>Costura Reforçada</li>
+                            <li>Acabamento Premium</li>
+                            <li>Resistente a Rugas</li>
+                            <li>Estampas de Alta Durabilidade</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="size-selector">
+                        <label>Selecione o tamanho:</label>
+                        <div class="size-options" id="sizeOptions">
+                            <div class="size-option" data-size="P">P</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="G">G</div>
+                            <div class="size-option" data-size="GG">GG</div>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart-btn" id="addToCartBtn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrinho -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3 class="cart-title">Seu Carrinho</h3>
+            <span class="close-cart" id="closeCart">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Itens do carrinho serão inseridos via JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            <div class="cart-buttons">
+                <button class="btn continue-shopping" id="continueShopping">Continuar Comprando</button>
+                <button class="btn checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão WhatsApp -->
+    <div class="whatsapp-float" id="whatsappFloat">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DC Store</h3>
+                    <p>Especialistas em camisas masculinas de alta qualidade. Combinamos tradição e inovação para criar peças que definem elegância contemporânea.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i><b>Home</b></a></li>
+                        <li><a href="#novidades"><i class="fas fa-chevron-right"></i><b>Novidades</b></a></li>
+                        <li><a href="#produtos"><i class="fas fa-chevron-right"></i><b>Produtos</b></a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contatos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#telefone"><i class="fas fa-chevron-right"></i><b>Contato:</b>38998287571</a></li>
+                        <li><a href="mailto:contato@seudominio.com"><i class="fas fa-chevron-right"></i><b>E-mail:</b> dcstore@gmail.com</a></li>
+                        <li><a href="#cidade"><i class="fas fa-chevron-right"></i><b>Cidade:</b> Três Marias - MG / CEP 39205-000</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DC Store. Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
